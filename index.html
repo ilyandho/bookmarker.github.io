@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BookMarker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./semantic.min.css" />
+
+    <script src="./semantic.min.js"></script>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      li {
+        text-decoration: none;
+        list-style-type: none;
+        list-style: none;
+      }
+      #del {
+        color: red;
+      }
+      body {
+        margin: auto 30%;
+      }
+    </style>
+  </head>
+  <body onload="fetchBookmarks()">
+    <div class="ui segment center">
+      <h1 style="text-align: center">My Bookmarked Sites</h1>
+    </div>
+    <div class="ui container segment">
+      <form class="ui form" id="myForm">
+        <div class="field">
+          <label>Site Name:</label>
+          <input
+            type="text"
+            name="siteName"
+            placeholder="Site Name"
+            id="siteName"
+          />
+        </div>
+        <div class="field">
+          <label>Site Url</label>
+          <input
+            type="text"
+            name="siteUrl"
+            placeholder="Site Url"
+            id="siteUrl"
+            type="url"
+          />
+        </div>
+
+        <button class="ui primary button fluid" type="submit" id="btn">
+          Submit
+        </button>
+      </form>
+      <br />
+      <div class="ui container inverted">
+        <div id="bookmarkResults" class="ui segment inverted ">
+          <ul class="ui list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
